@@ -14,7 +14,7 @@ public class UBBDispenserShulkerBoxFixerPlugin extends JavaPlugin implements Lis
 
     @EventHandler
     public void onBlockDispense(BlockDispenseEvent e) {
-        if (e.getBlock().getY() == 0 || e.getBlock().getY() == e.getBlock().getWorld().getMaxHeight()) {
+        if (e.getBlock().getY() == 0 || e.getBlock().getY() == e.getBlock().getWorld().getMaxHeight()-1) {
             if (e.getItem().getType().name().endsWith("SHULKER_BOX")) {
                 e.setCancelled(true);
             }
