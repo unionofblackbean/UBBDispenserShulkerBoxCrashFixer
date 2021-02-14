@@ -10,6 +10,6 @@
 
 ### 使用教程
 
-1. 從 [發行頁](https://github.com/unionofblackbean/UBBDispenserShulkerBoxCrashFixer/releases) 下載已經編譯好的jar.
-2. 將你剛剛下載的jar放進你伺服器的"plugin"檔案夾.
-3. 重啟伺服器以啟用插件.
+1. 從 [發行頁](https://github.com/unionofblackbean/UBBDispenserShulkerBoxCrashFixer/releases) 下載已經編譯好的jar。
+2. 將你剛剛下載的jar放進你伺服器的"plugin"檔案夾。
+3. 重啟伺服器以啟用插件。
