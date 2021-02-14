@@ -1,5 +1,7 @@
 # UBBDispenserShulkerBoxCrashFixer
 
+[繁體中文(香港)](./README.zh_HK.md)
+
 ### Purpose
 
 In servers lower than 1.13, when a dispenser is placed at y=0 and facing
