@@ -1,7 +1,0 @@
-PlayerMessage: "A dispenser at the top or bottom of the world and near you wants to dispense a shulker box with items. We have blocked it."
-# {0}: Block world name
-# {1}: Block X
-# {2}: Block Y
-# {3}: Block Z
-# {4}: The players near the dispenser
-ConsoleMessage: "A dispenser({0}, {1}, {2}, {3}) at the top or bottom of the world wants to dispense a shulker box with items. The players near it are {4}. We have blocked it."

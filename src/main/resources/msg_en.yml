@@ -1,0 +1,6 @@
+console:
+  # {0}: X-coordinate of the dispenser
+  # {1}: Y-coordinate of the dispenser
+  # {2}: Z-coordinate of the dispenser
+  # {3}: Name of the world that the dispenser is located
+  message: "A dispenser at ({0}, {1}, {2}) in world ({3}) tries to dispense a shulker box with items out of the would. Dispensation was cancelled."
