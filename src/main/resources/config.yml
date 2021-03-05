@@ -1,1 +1,6 @@
-Language: "English"
+log:
+  console: true
+
+# English: en
+# Chinese (Simplified): zh_cn
+lang: "en"
