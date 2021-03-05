@@ -27,18 +27,25 @@ public class UBBDispenserShulkerBoxFixerPlugin extends JavaPlugin {
     @Override
     public void onEnable() {
         this.saveDefaultConfig();
+
         final String localeKey = getConfig().getString("Language");
         File langFile = new File(this.getDataFolder(), localeKey + ".yml");
-        if (!langFile.exists()) this.saveResource(localeKey + ".yml", false);
+        if (!langFile.exists())
+            this.saveResource(localeKey + ".yml", false);
+
         try {
             FileConfiguration lang = YamlConfiguration.loadConfiguration(langFile);
             playerMessage = ChatColor.translateAlternateColorCodes('&', lang.getString("PlayerMessage"));
             consoleMessage = ChatColor.translateAlternateColorCodes('&', lang.getString("ConsoleMessage"));
         } catch (Throwable e) {
-            getLogger().severe("Failed to load locale " + localeKey + " because file doesn't exist. We will use English as default message language.");
-            playerMessage = "A dispenser at the top or bottom of the world and near you wants to dispense a shulker box with items. We have blocked it. Please don't do this again, or you will be banned by the server.";
-            consoleMessage = "A dispenser({0}, {1}, {2}, {3}) at the top or bottom of the world wants to dispense a shulker box with items. The player near it is {4}. We have blocked it.";
+            getLogger().severe(
+                    "Failed to load locale " + localeKey + " because file doesn't exist. We will use English as default message language.");
+            playerMessage =
+                    "A dispenser at the top or bottom of the world and near you wants to dispense a shulker box with items. We have blocked it. Please don't do this again, or you will be banned by the server.";
+            consoleMessage =
+                    "A dispenser({0}, {1}, {2}, {3}) at the top or bottom of the world wants to dispense a shulker box with items. The player near it is {4}. We have blocked it.";
         }
+
         this.getServer().getPluginManager().registerEvents(new Listener() {
             @EventHandler
             public void onBlockDispense(BlockDispenseEvent e) {
@@ -51,9 +58,10 @@ public class UBBDispenserShulkerBoxFixerPlugin extends JavaPlugin {
                     final boolean yMaxFacingDown = b.getY() == b.getWorld().getMaxHeight() - 1 &&
                             f == BlockFace.UP;
 
-                    if (y0FacingDown || yMaxFacingDown)
+                    if (y0FacingDown || yMaxFacingDown) {
                         if (e.getItem().getType().name().toLowerCase().endsWith("shulker_box")) {
                             e.setCancelled(true);
+
                             final Location loc = b.getLocation();
                             final List<String> players = new ArrayList<>();
                             Bukkit.getOnlinePlayers().forEach(player -> {
@@ -63,6 +71,7 @@ public class UBBDispenserShulkerBoxFixerPlugin extends JavaPlugin {
                                     players.add(player.getName());
                                 }
                             });
+
                             getLogger().info(MessageFormat.format(consoleMessage,
                                     loc.getWorld().getName(),
                                     loc.getBlockX(),
@@ -70,6 +79,7 @@ public class UBBDispenserShulkerBoxFixerPlugin extends JavaPlugin {
                                     loc.getBlockZ(),
                                     players));
                         }
+                    }
                 }
             }
         }, this);
