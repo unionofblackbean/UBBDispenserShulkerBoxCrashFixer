@@ -41,9 +41,9 @@ public class UBBDispenserShulkerBoxFixerPlugin extends JavaPlugin {
             getLogger().severe(
                     "Failed to load locale " + localeKey + " because file doesn't exist. We will use English as default message language.");
             playerMessage =
-                    "A dispenser at the top or bottom of the world and near you wants to dispense a shulker box with items. We have blocked it. Please don't do this again, or you will be banned by the server.";
+                    "A dispenser at the top or bottom of the world and near you wants to dispense a shulker box with items. We have blocked it.";
             consoleMessage =
-                    "A dispenser({0}, {1}, {2}, {3}) at the top or bottom of the world wants to dispense a shulker box with items. The player near it is {4}. We have blocked it.";
+                    "A dispenser({0}, {1}, {2}, {3}) at the top or bottom of the world wants to dispense a shulker box with items. The players near it are {4}. We have blocked it.";
         }
 
         this.getServer().getPluginManager().registerEvents(new Listener() {

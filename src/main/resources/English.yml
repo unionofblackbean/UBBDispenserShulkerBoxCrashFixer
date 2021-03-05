@@ -1,4 +1,4 @@
-PlayerMessage: "A dispenser at the top or bottom of the world and near you wants to dispense a shulker box with items. We have blocked it. Please don't do this again, or you will be banned by the server."
+PlayerMessage: "A dispenser at the top or bottom of the world and near you wants to dispense a shulker box with items. We have blocked it."
 # {0}: Block world name
 # {1}: Block X
 # {2}: Block Y
