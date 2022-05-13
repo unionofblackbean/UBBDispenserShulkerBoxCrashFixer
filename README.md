@@ -1,6 +1,6 @@
 # UBBDispenserShulkerBoxCrashFixer
 
-[繁體中文(香港)](./README.zh_HK.md)
+[English](./README.md) | [繁體中文(香港)](./README.zh_HK.md) | [简体中文](./README.zh_CN.md)
 
 ### Purpose
 
